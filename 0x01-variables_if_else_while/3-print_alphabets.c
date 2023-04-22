@@ -1,23 +1,23 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Decription: 'Alphabets in lowercase and uppercase'
- * Return: always 0
+ * Decription: "Alphabets in Lowercase and Uppercase"
+ * Return: Always 0
  */
 int main(void)
 {
-	int n = 97;
-	int m = 66;
+	char lower = 'x';
+	char upper = 'X';
 
-	while (n <= 122)
+	for (lower <= 'y';)
 	{
-		putchar(n);
-		n++;
+	putchar(lower);
+	lower++;
 	}
-	while (m <= 90)
+	for (lower <= 'Y';)
 	{
-		putchar(m);
-		m++;
+	putchar(upper);
+	upper++;
 	}
 	putchar('\n');
 	return (0);
