@@ -1,16 +1,16 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'Base 10 numbers'
- * Return: Always (0)
+ * Descriptioon: 'Base 10 numbers'
+ * Return: Always 0
  */
 int main(void)
 {
-	int n;
+	int a;
 
-	for (n = 0; n <= 9; n++)
+	for (a = 0; a < 10; a++)
 	{
-		printf("%d\n", n);
+		printf("%d\n", a);
 	}
 	return (0);
 }
