@@ -2,26 +2,20 @@
 /**
  * main - Entry point
  * Description: 'Different combination of two digits'
- * Return: AAlways 0
+ * Return: Always 0
  */
 int main(void)
 {
 	int n, m;
 
-	for (n = 48; n <= 56; n++)
+	for (n = 0; n < 10; n++)
 	{
-		for (m = 49; m <= 57; m++)
+		for (m = n + 1; m < 10; m++)
 		{
-			if (n > m)
-			{
-				putchar(n);
-				putchar(m);
-				if (n != 56 || n != 57)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar(n + '0');
+			putchar(m + '0');
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
