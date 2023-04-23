@@ -1,24 +1,23 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Decription: "Alphabets in Lowercase and Uppercase"
- * Return: Always 0
+ * Description: 'alphabets in lowercase and uppercase'
+ * Return: always 0
  */
 int main(void)
 {
-	char lower = 'x';
-	char upper = 'X';
+	char ch;
 
-	for (lower <= 'y';)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-	putchar(lower);
-	lower++;
+		putchar(ch);
 	}
-	for (lower <= 'Y';)
+
+	for (ch = 'A'; ch <= 'Z'; ch++)
 	{
-	putchar(upper);
-	upper++;
+		putchar(ch);
 	}
+
 	putchar('\n');
 	return (0);
 }
