@@ -1,23 +1,22 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'Different combination of two digits'
+ * Description: 'different combinations of two digits'
  * Return: Always 0
  */
 int main(void)
 {
-	int n, m;
+	int i, j;
 
-	for (n = 0; n < 10; n++)
+	for (i = 0; i < 10; i++)
 	{
-		for (m = n + 1; m < 10; m++)
+		for (j = i + 1; j < 10; j++)
 		{
-			putchar(n + '0');
-			putchar(m + '0');
+			putchar(i + '0');
+			putchar(j + '0');
 			putchar(',');
 			putchar(' ');
 		}
 	}
-	putchar('\n');
 	return (0);
 }
