@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'three possible number formations'
+ * Description: 'different combinations of three digits'
  * Return: always 0
  */
 int main(void)
@@ -20,13 +20,14 @@ int main(void)
 					putchar(y);
 					putchar(z);
 					if (x != 55 || y != 56)
-						continue;
-					putchar(',');
-					putchar(' ');
+					{
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
 		}
+	}
 	putchar('\n');
 	return (0);
 }
