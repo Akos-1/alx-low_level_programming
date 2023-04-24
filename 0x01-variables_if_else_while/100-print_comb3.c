@@ -1,26 +1,24 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'different combinations of two digits'
+ * Description: ' different combinations of two digits'
  * Return: always 0
  */
 int main(void)
 {
-	int a, b;
+	int Num1, Num2;
 
-	for (a = 0; a < 9; a++)
+	for (Num1 = 0; Num1 < 9; Num1++)
 	{
-		for (b = a + 1; b <= 9; b++)
+		for (Num2 = Num1 + 1; Num2 < 10; Num2++)
 		{
-			if (b != a)
-			{
-				putchar(a);
-				putchar(b);
-				if (a == 8 && b == 9)
-					continue;
-				putchar(',');
-				putchar(' ');
-			}
+			putchar((Num1 % 10) + '0');
+			putchar((Num2 % 10) + '0');
+
+			if (Num1 == 8 && Num2 == 9)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
