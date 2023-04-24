@@ -1,22 +1,22 @@
 #include <stdio.h>
 /**
- * main: - Entry point
+ * main - Entry point
  * Description: 'different combinations of two digits'
- * Return: Always 0
+ * Return: always 0
  */
 int main(void)
 {
-	int i, j;
+	int a, b;
 
-	for (i = 0; i < 9; i++)
+	for (a = 0; a < 9; a++)
 	{
-		for (j = i + 1; j <= 9; j++)
+		for (b = a + 1; b <= 9; b++)
 		{
-			if (j != i)
+			if (b != a)
 			{
-				putchar(i);
-				putchar(j);
-				if (i == 8 && j == 9)
+				putchar(a);
+				putchar(b);
+				if (a == 8 && b == 9)
 					continue;
 				putchar(',');
 				putchar(' ');
