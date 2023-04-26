@@ -3,7 +3,8 @@
  * print_sign - the sign of a number
  *
  * @n: Digit whose sign is to be checked
- * Return: 1-if n is greater than 0: 0-if n equals 0: -1-if n is less than 0.
+ * Return: 1 is greater than zero. 0 is zero.
+ * -1 isless than zero.
  */
 int print_sign(int n)
 {
