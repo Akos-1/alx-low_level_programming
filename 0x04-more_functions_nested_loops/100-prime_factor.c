@@ -5,14 +5,14 @@
  */
 int main(void)
 {
-	long int n, a;
+	long int a, b;
 
-	n = 612852475143;
-	for (b = 2; b <= n; b++)
+	a = 612852475143;
+	for (b = 2; b <= a; b++)
 	{
-		if (n % b == 0)
+		if (a % b == 0)
 		{
-			n /= b;
+			a /= b;
 			b--;
 		}
 	}
