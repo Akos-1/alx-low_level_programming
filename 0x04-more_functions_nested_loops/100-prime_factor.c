@@ -5,15 +5,15 @@
  */
 int main(void)
 {
-	long int n, b;
+	long int n, a;
 
 	n = 612852475143;
 	for (b = 2; b <= n; b++)
 	{
 		if (n % b == 0)
 		{
-			n /= a;
-			a--;
+			n /= b;
+			b--;
 		}
 	}
 	printf("%ld\n", b);
