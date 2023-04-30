@@ -12,32 +12,28 @@ void print_times_table(int n)
 	{
 		for (x = 0; x <= n; x++)
 		{
-			_putchar(48);
+			_putchar('0');
 			for (y = 1; y <= n; y++)
 			{
+				_putchar(',');
+				_putchar(' ');
 				op = x * y;
-				_putchar(44);
-				_putchar(32);
+				if (op <= 99)
+					_putchar(' ');
 				if (op <= 9)
+					_putchar(' ');
+				if (op >= 100)
 				{
-					_putchar(32);
-					_putchar(32);
-					_putchar(op + 48);
+					_putchar((op / 100) + '0');
+					_putchar(((op / 10)) % 10 + '0');
 				}
-				else if (op <= 99)
+				else if (op <= 99 && op >= 10)
 				{
-					_putchar(32);
-					_putchar((op / 10) + 48);
-					_putchar((op % 10) + 48);
+					_putchar((op / 10) + '0');
 				}
-				else
-				{
-					_putchar(((op / 100) % 10) + 48);
-					_putchar(((op / 10) % 10) + 48);
-					_putchar(((op % 10) + 48));
-							}
-							}
-							_putchar('\n');
-							}
-							}
-							}
+				_putchar((op % 10) + '0');
+			}
+			_putchar('\n');
+		}
+	}
+}
