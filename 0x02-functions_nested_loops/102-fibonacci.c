@@ -6,18 +6,20 @@
 int main(void)
 {
 	int c;
-	long int x, y, z;
+	unsigned long x1 = 0, x2 = 1, x;
 
-	x = 1;
-	y = 2;
-	printf("%ld,%ld", x, y);
-	for (c = 0; c < 48; c++)
+	for (c = 0; c < 50; c++)
 	{
-		z = x + y;
-		printf(",%ld", z);
-		x = y;
-		y = z;
+		x = x1 + x2;
+		printf("%lu", x);
+
+		x1 = x2;
+		x2 = x;
+
+		if (c == 49)
+			printf("\n");
+		else
+			printf(",");
 	}
-	printf("\n");
 	return (0);
 }
