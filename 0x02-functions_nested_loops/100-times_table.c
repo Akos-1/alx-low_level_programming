@@ -1,11 +1,11 @@
 #include "main.h"
 /**
  * print_times_table -  times table
- * @n: number of  times table to be printed
+ * @n: number of times table to be printed
  */
-void print_times_table(int)
+void print_times_table(int n)
 {
-	int x, y, op;
+	int x, y, z;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -16,21 +16,21 @@ void print_times_table(int)
 			{
 				_putchar(',');
 				_putchar(' ');
-				op = x * y;
-				if (op <= 99)
+				z = x * y;
+				if (z <= 99)
 					_putchar(' ');
-				if (op <= 9)
+				if (z <= 9)
 					_putchar(' ');
-				if (op >= 100)
+				if (z >= 100)
 				{
-					_putchar((op / 100) + '0');
-					_putchar(((op / 10)) % 10 + '0');
+					_putchar((z / 100) + '0');
+					_putchar(((z / 10)) % 10 + '0');
 				}
-				else if (op <= 99 && op >= 10)
+				else if (op <= 99 && z >= 10)
 				{
-					_putchar((op / 10) + '0');
+					_putchar((z / 10) + '0');
 				}
-				_putchar((op % 10) + '0');
+				_putchar((z % 10) + '0');
 			}
 			_putchar('\n');
 		}
