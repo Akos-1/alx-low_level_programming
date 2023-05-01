@@ -12,10 +12,8 @@ int main(void)
 	{
 		x = x1 + x2;
 		printf("%lu", x);
-
 		x1 = x2;
 		x2 = x;
-
 		if (c == 49)
 			printf("\n");
 		else
