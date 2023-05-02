@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int pass[100]
+	int pass[100];
 	int a, b, c;
 
 	b = 0;
@@ -21,7 +21,7 @@ int main(void)
 		{
 			c = 2772 - b - '0';
 			b += c;
-			putcahr(c + '0');
+			putchar(c + '0');
 			break;
 		}
 	}
