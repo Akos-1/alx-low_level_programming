@@ -1,34 +1,30 @@
 #include "main.h"
 /**
  * cap_string - capitalizes all words of a string
- * @str: string to be capitalized
+ * @st: string to be capitalized
  * Return: a pointer to the changed string
  */
-char *cap_string(char *str)
+char *cap_string(char *st)
 {
-	int y = 0;
+	int x = 0;
+	int y;
+	int st[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	while (str[y])
+	if (*(st + x) >= 97 && *(st + x) <= 122)
+		*(st + x) = *(st + x) - 32;
+	x++;
+	while (*(st + x) != '\0')
 	{
-		while (!(str[y] >= 'a' && str[y] <= 'z'))
-			y++;
-		if
-			(str[y - 1] == ' ' ||
-				str[y - 1] == '\t' ||
-				str[y - 1] == '\n' ||
-				str[y - 1] == ',' ||
-				str[y - 1] == ';' ||
-				str[y - 1] == '.' ||
-				str[y - 1] == '!' ||
-				str[y - 1] == '?' ||
-				str[y - 1] == '"' ||
-				str[y - 1] == '(' ||
-				str[y - 1] == ')' ||
-				str[y - 1] == '(" ||
-				str[y - 1] == ')' ||
-				y == 0)
-				str[y] -= 32;
-				y++;
+		for (y = 0; y < 13; y++)
+		{
+			if (*(st + x) == st[y])
+			{
+				if ((*(s + (x + 1)) >= 97) && (*(st + (x + 1)) <= 122))
+					*(st + (x + 1)) = *(st + (x + 1)) - 32;
+				break;
+			}
+		}
+		x++;
 	}
-	return (str);
-	}
+	return (st);
+}
