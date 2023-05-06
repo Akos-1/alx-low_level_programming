@@ -9,10 +9,9 @@
  * @size_r: buffer size
  * Result: a pointer
  */
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int = a1, a2 = 0, a3, a4, a5, a6, a = 0;
+	int a1 = 0, a2 = 0, a3, a4, a5, a6, a = 0;
 
 	while (*(n1 + a1) != '\0')
 		a1++;
