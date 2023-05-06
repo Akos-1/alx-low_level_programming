@@ -25,7 +25,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (0);
 	r[a4 + 1] = '\0';
 	a1--, a2--, size_r--;
-	a5 = *(n1 + a1) - 48, a5 = *(n2 + a2) - 48;
+	a5 = *(n1 + a1) - 48, a6 = *(n2 + a2) - 48;
 	while (a4 >= 0)
 	{
 		a3 = a5 + a6 + a;
