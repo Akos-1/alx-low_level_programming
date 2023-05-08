@@ -1,27 +1,24 @@
 #include "main.h"
 /**
- * strstr - points a substring
- * haystack: pointer to a character
- * needle: pointer to  a character
- * Return: pointer at the beginning of a substring
+ * _strstr - points a substring
+ * @haystack: points to a character
+ * @needle: points to a character
+ * Return: always 0 (success)
  */
-
 char *_strstr(char *haystack, char *needle)
 {
-	int x = 0;
-	int y = 0;
-
-	for (x = 0; haystack[x] != '\0'; x++)
+	for (; *haystack != '\0'; haystack++)
 	{
-		for (y = 0; needle[y] != '\0'; y++)
+		char *three = haystack;
+		char *four = needle;
+
+		while (*three == *four && *four != '\0')
 		{
-			if (needle[y] != haystack[x + y])
-			{
-				break;
-			}
+			three++;
+			four++;
 		}
-		if (needle[y] == '\0')
-			return (haystack + x);
+		if (*four == '\0')
+			return (haystack);
 	}
 	return (0);
 }
