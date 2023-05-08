@@ -5,6 +5,7 @@
  * needle: pointer to  a character
  * Return: pointer at the beginning of a substring
  */
+
 char *_strstr(char *haystack, char *needle)
 {
 	int x = 0;
