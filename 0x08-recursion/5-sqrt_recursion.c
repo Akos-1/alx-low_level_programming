@@ -1,29 +1,28 @@
 #include "main.h"
-
-int true_sqrt_recursion(int n, int i);
+int real_sqrt_recursion(int n, int i);
 /**
- * _sqrt_recursion - displays natural square root of a number
+ * _sqrt_recursion - displays the natural square root of a number
  * @n: inputed number
- * Return: result of square root
+ * Return: natural square root
  */
-int_sqrt_recursion(int n)
+int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (actual_sqrt_recursion(n, 0));
+	return (real_sqrt_recursion(n, 0));
 }
 /**
- * true_sqrt_recursion - finds natural square root of a number
+ * real_sqrt_recursion - naturalsquare root of a number
  * @n: inputed number
  * @i: iterator
- * Return: result of square root
+ * Return: natural square root
  */
-int true_sqrt_recursion(int n, int i)
+int real_sqrt_recursion(int n, int i)
 {
 	if (i * i > n)
 		return (-1);
 	if (i * i == n)
 		return (i);
-	return (true_ sqrt_recursion(n, i + 1));
+	return (real_sqrt_recursion(n, i + 1));
 }
 
