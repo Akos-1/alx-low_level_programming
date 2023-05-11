@@ -28,14 +28,14 @@ int _strlen_recursion(char *s)
  * check_pal - checks the recursion of character
  * @s: string to be checked
  * @i: iterator
- * @long: string length
+ * @len: string length
  * Return: 1 if palindrome, 0 if not
  */
-int check_pal(char *s, int i, int long)
+int check_pal(char *s, int i, int len)
 {
-	if (*(s + i) != *(s + long - 1))
+	if (*(s + i) != *(s + len - 1))
 		return (0);
-	if (i >= long)
+	if (i >= len)
 		return (1);
-	return (check_pal(s, i + 1, long - 1));
+	return (check_pal(s, i + 1, len - 1));
 }
