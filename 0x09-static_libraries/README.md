@@ -1,1 +1,1 @@
-My static
+My statics
