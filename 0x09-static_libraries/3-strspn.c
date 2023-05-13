@@ -1,13 +1,28 @@
 #include "main.h"
 /**
- * _puts - prints a string, followed by a new line
- * @str: string to be printed
+ * _strspn - starting point
+ * @s: inputed string
+ * @accept: new input
+ * Return: Always 0(success)
  */
-void _puts(char *str)
+unsigned int _strspn(char *s, char *accept)
 {
-	while (*str != '\0')
+	int x;
+	int y;
+
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		_putchar(*str++);
+		for (y = 0; accept[y] != '\0'; y++)
+		{
+			if (s[x] == accept[y])
+			{
+				break;
+			}
+		}
+		if (accept[y] == '\0')
+		{
+			break;
+		}
 	}
-	_putchar('\n');
+	return (x);
 }
