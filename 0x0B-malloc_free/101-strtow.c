@@ -54,15 +54,16 @@ char **strtow(char *str)
 					return (NULL);
 				while (k < l)
 					*n++ = str[k++];
-			*n = '\0';
-			m[j] = n - x;
-			j++;
-			x = 0;
+				*n = '\0';
+				m[j] = n - x;
+				j++;
+				x = 0;
+			}
 		}
+		else if (x++ == 0)
+			k = i;
 	}
-	else if (x++ == 0)
-		k = i;
+	m[j] = NULL;
+	return (m);
 }
-m[j] = NULL;
-return (m);
-}
+
