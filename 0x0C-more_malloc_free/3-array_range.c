@@ -4,17 +4,19 @@
  * @min: minimum input
  * @max: maximum input
  * Return: pointer
+ * if min > max, return NULL
+ * if malloc fails, return NULL
  */
 int *array_range(int min, int max)
 {
-	int *arr, b = 0, c = min;
+	int *ar, b;
 
 	if (min > max)
-		return (0);
-	arr = malloc((max - min * 1) * sizeof(int));
-	if (!arr)
-		return (0);
-	while (b <= max - min)
-		arr[b++] = c++;
-	return (arr);
+		return (NULL);
+	ar = malloc(sizeof(*ar) * ((max - min) + 1));
+	if (ar == NULL)
+		return (NULL);
+	for (b = 0; min <= max; b++, min++)
+		ar[b] = min;
+	return (ar);
 }
