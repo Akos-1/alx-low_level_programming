@@ -47,7 +47,7 @@ void errors(void)
  */
 int main(int argc, char *argv[])
 {
-	char *s1, s2;
+	char *s1, *s2;
 	int len1, len2, len, i, carry, digit1, digit2, *result, z = 0;
 
 	s1 = argv[1], s2 = argv[2];
