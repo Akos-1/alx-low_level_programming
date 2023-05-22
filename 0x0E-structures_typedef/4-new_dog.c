@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "dog.h"
+#include <stdio.h>
 /**
  * _strlen - length of a string is returned
  * @s: inputed string
@@ -7,14 +8,13 @@
  */
 int _strlen(char *s)
 {
-	int i;
+	size_t length = 0;
 
-	i = 0;
-	while (s[i] != '\0')
+	while (*s++)
 	{
-		i++;
+		length++;
 	}
-	return (i);
+	return (length);
 }
 /**
  * _strcpy - duplicated string pointed by src
@@ -24,17 +24,13 @@ int _strlen(char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-	int len, i;
+	int i;
 
-	while (src[len] != '\0')
-	{
-		len++;
-	}
-	for (i = 0; i < len; i++)
+	for (i = 0; src[i] != '\0'; i++)
 	{
 		dest[i] = src[i];
 	}
-	dest[i] = '\0';
+	dest[i++] = '\0';
 	return (dest);
 }
 /**
