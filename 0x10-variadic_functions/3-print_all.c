@@ -9,10 +9,10 @@ void print_all(const char * const format, ...)
 {
 	int a = 0;
 	char *st, *b = "";
-
 	va_list list;
 
 	va_start(list, format);
+
 	if (format)
 	{
 		while (format[a])
@@ -29,8 +29,8 @@ void print_all(const char * const format, ...)
 					printf("%s%f", b, va_arg(list, double));
 					break;
 				case 's':
-					st = va_arg(list, char*);
-					if (!st)
+					st = va_arg(list, char *);
+					if (st == NULL)
 						st = "(nil)";
 					printf("%s%s", b, st);
 					break;
@@ -38,7 +38,7 @@ void print_all(const char * const format, ...)
 					a++;
 					continue;
 			}
-			b = ",";
+			b = ", ";
 			a++;
 		}
 	}
