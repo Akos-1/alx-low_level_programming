@@ -1,10 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
  * read_textfile - text file is read and printed
  * @filename: text file to be read
  * @letters: letters to be read
- * Return: wr, actual number if read or printed 
+ * Return: wr, actual number if read or printed
  * and 0 it fail or filename is NULL.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
