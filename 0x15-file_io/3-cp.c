@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	}
 	bf = create_buffer(argv[2]);
 	fr = open(argv[1], O_RDONLY);
-	re = read(from, buffer, 1024);
+	re = read(fr, bf, 1024);
 	t = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	do {
 		if (fr == -1 || re == -1)
@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 			free(bf);
 			exit(98);
 		}
-		wr = write(to, bf, re);
+		wr = write(t, bf, re);
 		if (t == -1 || wr == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
