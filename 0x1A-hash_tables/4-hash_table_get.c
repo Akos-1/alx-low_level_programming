@@ -1,9 +1,9 @@
 #include "hash_tables.h"
 /**
- * hash_table_set - add an element to the hash table
+ * hash_table_get - add an element to the hash table
  * @ht: a pointer to the hash table
  * @key: the key to be added
- * Return: NULL if the key cannot be matched 
+ * Return: NULL if the key cannot be matched
  * Otherwise the value associated with the ket in ht
  */
 
@@ -29,5 +29,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		current = current->next;
 	}
 
-	return (NULL);  
+	return (NULL);
 }
