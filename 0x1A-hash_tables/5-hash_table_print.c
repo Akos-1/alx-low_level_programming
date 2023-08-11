@@ -5,7 +5,10 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
+	int first_entry = 1;
 	unsigned long int i;
+
+	printf("{");
 
 	if (ht == NULL)
 	{
@@ -18,8 +21,18 @@ void hash_table_print(const hash_table_t *ht)
 
 		while (current != NULL)
 		{
-			printf("'%s': '%s'\n", current->key, current->value);
+			if (!first_entry)
+			{
+				printf(", ");
+			}
+			else
+			{
+				first_entry = 0;
+			}
+
+			printf("'%s': '%s'", current->key, current->value);
 			current = current->next;
 		}
 	}
+	printf("}\n");
 }
